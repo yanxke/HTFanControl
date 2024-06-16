@@ -14,6 +14,7 @@ read -p "Are you sure you want to INSTALL HTFanControl? [y/n]" -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
+    apt install libssl1.1
 	mkdir /opt/HTFanControl
 	wget -O /tmp/$file https://github.com/nicko88/HTFanControl/releases/latest/download/$file
 	unzip /tmp/$file -d /opt/HTFanControl
